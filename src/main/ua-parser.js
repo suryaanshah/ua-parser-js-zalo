@@ -426,8 +426,7 @@
             /\b(line)\/([\w\.]+)\/iab/i,                                        // Line App for Android
             /(alipay)client\/([\w\.]+)/i,                                       // Alipay
             /(twitter)(?:and| f.+e\/([\w\.]+))/i,                               // Twitter
-            /(instagram|snapchat)[\/ ]([-\w\.]+)/i,                             // Instagram/Snapchat
-            /(zalo(?:app)?|zalo pay(?:client)?)[\/\sa-z]*([\w\.-]+)/i           // Zalo App
+            /(instagram|snapchat)[\/ ]([-\w\.]+)/i                              // Instagram/Snapchat
             ], [NAME, VERSION, [TYPE, INAPP]], [
             /\bgsa\/([\w\.]+) .*safari\//i                                      // Google Search Appliance on iOS
             ], [VERSION, [NAME, 'GSA'], [TYPE, INAPP]], [
@@ -435,6 +434,8 @@
             ], [VERSION, [NAME, 'TikTok'], [TYPE, INAPP]], [
             /\[(linkedin)app\]/i                                                // LinkedIn App for iOS & Android
             ], [NAME, [TYPE, INAPP]], [
+            /(zalo(?:app)?)[\/\sa-z]*([\w\.-]+)/i                               // Zalo 
+            ], [[NAME, /(.+)/, 'Zalo'], VERSION, [TYPE, INAPP]], [
 
             /(chromium)[\/ ]([-\w\.]+)/i                                        // Chromium
             ], [NAME, VERSION], [
