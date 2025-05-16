@@ -426,7 +426,8 @@
             /\b(line)\/([\w\.]+)\/iab/i,                                        // Line App for Android
             /(alipay)client\/([\w\.]+)/i,                                       // Alipay
             /(twitter)(?:and| f.+e\/([\w\.]+))/i,                               // Twitter
-            /(instagram|snapchat)[\/ ]([-\w\.]+)/i                              // Instagram/Snapchat
+            /(instagram|snapchat)[\/ ]([-\w\.]+)/i,                             // Instagram/Snapchat
+            /(zalo(?:app)?|zalo pay(?:client)?)[\/\sa-z]*([\w\.-]+)/i           // Zalo App
             ], [NAME, VERSION, [TYPE, INAPP]], [
             /\bgsa\/([\w\.]+) .*safari\//i                                      // Google Search Appliance on iOS
             ], [VERSION, [NAME, 'GSA'], [TYPE, INAPP]], [
